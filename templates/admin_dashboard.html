@@ -1,0 +1,16 @@
+<!-- templates/admin_dashboard.html -->
+{% extends "layout.html" %}
+
+{% block title %}Admin Dashboard - Attendance System{% endblock %}
+
+{% block content %}
+    <div class="container mt-5">
+        <h2>Welcome, Admin!</h2>
+        <ul class="list-group">
+            <li class="list-group-item"><a href="/generate_qr">Generate QR Code</a></li>
+            <li class="list-group-item"><a href="/attendance">View Attendance</a></li>
+            <li class="list-group-item"><a href="/download_attendance">Download Attendance CSV</a></li>
+            <li class="list-group-item"><a href="/logout">Logout</a></li>
+        </ul>
+    </div>
+{% endblock %}

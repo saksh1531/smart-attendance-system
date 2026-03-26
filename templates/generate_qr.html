@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Generate QR Code</title>
+</head>
+<body>
+    <h1>Generate QR Code</h1>
+    <form action="/generate_qr" method="POST">
+        <label for="roll_number">Roll Number:</label>
+        <input type="text" id="roll_number" name="roll_number" required><br><br>
+        <label for="prn">PRN:</label>
+        <input type="text" id="prn" name="prn" required><br><br>
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required><br><br>
+        <button type="submit">Generate QR Code</button>
+    </form>
+    {% if qr_filename %}
+        <h2>QR Code Generated:</h2>
+        <img src="{{ url_for('static', filename='qr_codes/' + qr_filename) }}" alt="QR Code">
+    {% endif %}
+    <a href="/dashboard">Back to Dashboard</a>
+</body>
+</html>
+

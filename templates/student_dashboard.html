@@ -1,0 +1,14 @@
+<!-- templates/student_dashboard.html -->
+{% extends "layout.html" %}
+
+{% block title %}Student Dashboard - Attendance System{% endblock %}
+
+{% block content %}
+    <div class="container mt-5">
+        <h2>Welcome, {{ username }}!</h2>
+        <ul class="list-group">
+            <li class="list-group-item"><a href="/view_attendance">View My Attendance</a></li>
+            <li class="list-group-item"><a href="/logout">Logout</a></li>
+        </ul>
+    </div>
+{% endblock %}

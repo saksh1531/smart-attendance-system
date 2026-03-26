@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+</head>
+<body>
+    <h1>Welcome, {{ username }}</h1>
+    {% if session['is_admin'] %}
+        <a href="/generate_qr">Generate QR Code</a> |
+        <a href="/attendance">View Attendance</a> |
+        <a href="/download_attendance">Download Attendance</a>
+    {% else %}
+        <a href="/scan_qr">Scan QR Code</a>
+    {% endif %}
+    <br><br>
+    <a href="/logout">Logout</a>
+</body>
+</html>

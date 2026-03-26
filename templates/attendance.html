@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Attendance</title>
+</head>
+<body>
+    <h1>Attendance Records</h1>
+    <table border="1">
+        <thead>
+            <tr>
+                <th>Roll Number</th>
+                <th>PRN</th>
+                <th>Name</th>
+                <th>Attendance</th>
+                <th>Date</th>
+                <th>Time</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for record in attendance_data %}
+                <tr>
+                    <td>{{ record['Roll Number'] }}</td>
+                    <td>{{ record['PRN'] }}</td>
+                    <td>{{ record['Name'] }}</td>
+                    <td>{{ record['Attendance'] }}</td>
+                    <td>{{ record['Date'] }}</td>
+                    <td>{{ record['Time'] }}</td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+    <a href="/dashboard">Back to Dashboard</a>
+</body>
+</html>
